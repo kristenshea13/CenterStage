@@ -1,0 +1,19 @@
+﻿@page "{id:int}"
+@model CenterStage.Pages.Classes.RegistrationModel
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<h1>Register for @Model.ClassTitle</h1>
+
+<form method="post">
+    <div class="form-group">
+        <select asp-for="StudentID" asp-items="Model.Students">
+            <option value="">Select Student</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Register" class="btn btn-primary" />
+    </div>
+</form>
