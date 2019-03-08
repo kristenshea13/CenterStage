@@ -21,9 +21,9 @@ namespace CenterStage.Data.Models
         //@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$"
 
         [Required, DataType(DataType.PhoneNumber),
-            Display(Name = "Phone Number (###) ###-####"),
+            Display(Name = "Phone Number"),
             RegularExpression(@"^\(([0-9]{3})\)[ ]([0-9]{3})[-]([0-9]{4})$",
-            ErrorMessage = "Not a valid phone number")]
+            ErrorMessage = "Please enter as (###) ###-####")]
         public string PhoneNumber { get; set; }
 
         [Required, DataType(DataType.EmailAddress)]
