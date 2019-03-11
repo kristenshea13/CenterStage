@@ -426,4 +426,9 @@
     <None Include="wwwroot\lib\jquery\src\wrap.js" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="Pages\ClassContactList\" />
+  </ItemGroup>
+
 </Project>
