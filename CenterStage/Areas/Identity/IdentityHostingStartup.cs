@@ -21,5 +21,8 @@ namespace CenterStage.Areas.Identity
             builder.ConfigureServices((context, services) => {
             });
         }
+
+        
+
     }
 }
