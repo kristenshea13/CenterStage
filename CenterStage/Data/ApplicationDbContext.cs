@@ -20,6 +20,6 @@ namespace CenterStage.Data
         public DbSet<CenterStage.Data.Models.Class> Class { get; set; }
         public DbSet<CenterStage.Data.Models.StudentInfo> StudentInfo { get; set; }
         public DbSet<StudentRegistration> StudentRegistration { get; set; }
-        public DbSet<CenterStage.Data.Models.Cart> Cart { get; set; }
+        
     }
 }
