@@ -428,6 +428,7 @@
 
 
   <ItemGroup>
+    <Folder Include="Pages\Cart\" />
     <Folder Include="Pages\ClassContactList\" />
   </ItemGroup>
 

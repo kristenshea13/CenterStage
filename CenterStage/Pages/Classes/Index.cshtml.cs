@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CenterStage.Data.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -10,6 +11,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CenterStage.Pages.Classes
 {
+    //allows page to be seen without logging in or creating a user account
+    [AllowAnonymous]
     public class IndexModel : PageModel
     {
         private readonly CenterStage.Data.ApplicationDbContext _context;

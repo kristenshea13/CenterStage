@@ -1,4 +1,5 @@
 ﻿using CenterStage.Data.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -6,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace CenterStage.Pages.Classes
 {
+    [AllowAnonymous]
     public class DetailsModel : PageModel
     {
         private readonly CenterStage.Data.ApplicationDbContext _context;
