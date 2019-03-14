@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace CenterStage.Data.Models
 {
-    public class Cart
+    public class CheckoutCart
     {
-        [Key]
+        
         public int ID { get; set; }
 
+        [Key]
         public string CartID { get; set; }
 
         public string ClassTitle { get; set; }
