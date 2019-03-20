@@ -10,6 +10,7 @@ using CenterStage.Data.Models;
 
 namespace CenterStage.Pages.EditClasses
 {
+    
     public class CreateModel : PageModel
     {
         private readonly CenterStage.Data.ApplicationDbContext _context;

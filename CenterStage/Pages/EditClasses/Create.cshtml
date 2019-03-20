@@ -54,6 +54,11 @@
     <a asp-page="Index">Back to List</a>
 </div>
 
+@*<authorization>
+    <allow users="kstar61@live.com"></allow>
+    <deny users="?"></deny>
+</authorization>*@
+
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
