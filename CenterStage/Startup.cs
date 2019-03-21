@@ -43,6 +43,9 @@ namespace CenterStage
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
+            ApplicationDbContextExtensions.UserManager = services.BuildServiceProvider().
+                GetService<UserManager<AppUser>>();
+
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
