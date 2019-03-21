@@ -1,0 +1,39 @@
+﻿@page "{searchString?}"
+@model CenterStage.Pages.ClassContactList.IndexModel
+
+@{
+    ViewData["Title"] = "Class List";
+}
+
+<h1>Class List</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentRegistration[0].Class)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentRegistration[0].Student)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.StudentRegistration) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Class.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Student.Email)
+            </td>
+            <td>
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
