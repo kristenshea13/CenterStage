@@ -11,9 +11,10 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace CenterStage.Pages.EditClasses
 {
-    [Authorize]
+    
     public class CreateModel : PageModel
     {
+        
         private readonly CenterStage.Data.ApplicationDbContext _context;
 
         

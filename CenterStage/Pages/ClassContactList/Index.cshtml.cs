@@ -21,7 +21,17 @@ namespace CenterStage.Pages.ClassContactList
 
         public IList<StudentRegistration> StudentRegistration { get;set; }
 
+        //public async Task OnGetAsync()
+        //{
+        //    var movies = from m in _context.Movie
+        //                 select m;
+        //    if (!string.IsNullOrEmpty(SearchString))
+        //    {
+        //        movies = movies.Where(s => s.Title.Contains(SearchString));
+        //    }
 
+        //    Movie = await movies.ToListAsync();
+        //}
 
         public async Task OnGetAsync()
         {
