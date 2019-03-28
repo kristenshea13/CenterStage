@@ -17,6 +17,8 @@ namespace CenterStage.Pages.ClassContactList
 
         public IList<StudentRegistration> StudentRegistration { get; set; }
 
+
+
         //[BindProperty(SupportsGet = true)]
         //public string SearchString { get; set; }
 
@@ -43,5 +45,7 @@ namespace CenterStage.Pages.ClassContactList
                 .Include(s => s.Class)
                 .Include(s => s.Student).ToListAsync();
         }
+
+
     }
 }

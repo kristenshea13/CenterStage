@@ -19,5 +19,7 @@ namespace CenterStage.Data.Models
 
         public virtual StudentInfo Student { get; set; }
 
+
+
     }
 }
