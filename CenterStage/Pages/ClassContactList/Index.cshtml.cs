@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using CenterStage.Data.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using CenterStage.Data;
-using CenterStage.Data.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace CenterStage.Pages.ClassContactList
 {
@@ -19,18 +15,26 @@ namespace CenterStage.Pages.ClassContactList
             _context = context;
         }
 
-        public IList<StudentRegistration> StudentRegistration { get;set; }
+        public IList<StudentRegistration> StudentRegistration { get; set; }
 
-        //public async Task OnGetAsync()
+        //[BindProperty(SupportsGet = true)]
+        //public string SearchString { get; set; }
+
+        //public SelectList Titles { get; set; }
+        //[BindProperty(SupportsGet = true)]
+        //public string Title { get; set; }
+
+        //public async Task OneGetAsync()
         //{
-        //    var movies = from m in _context.Movie
-        //                 select m;
+        //    var titles = from s in _context.StudentRegistration select s;
+
         //    if (!string.IsNullOrEmpty(SearchString))
         //    {
-        //        movies = movies.Where(s => s.Title.Contains(SearchString));
+        //        titles = titles.Where(t => t.Class.Title.Contains(SearchString));
         //    }
 
-        //    Movie = await movies.ToListAsync();
+        //    Title = await titles.ToListAsync();
+
         //}
 
         public async Task OnGetAsync()
