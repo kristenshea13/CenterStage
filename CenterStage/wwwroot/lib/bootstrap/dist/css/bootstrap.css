@@ -4,7 +4,9 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+:
+
+root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -34,6 +36,8 @@
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
+
+
 
 *,
 *::before,
@@ -92,6 +96,8 @@ abbr[data-original-title] {
   border-bottom: 0;
   text-decoration-skip-ink: none;
 }
+
+
 
 address {
   margin-bottom: 1rem;

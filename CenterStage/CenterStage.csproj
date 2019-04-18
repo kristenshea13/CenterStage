@@ -8,14 +8,11 @@
 
   <ItemGroup>
     <Content Remove="bundleconfig.json" />
+    <Content Remove="wwwroot\images\photo.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <_ContentIncludedByDefault Remove="bundleconfig.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Pages\Photos\photo.jpg" />
   </ItemGroup>
 
 
@@ -36,6 +33,7 @@
 
   <ItemGroup>
     <None Include="bundleconfig.json" />
+    <None Include="wwwroot\images\photo.jpg" />
     <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
     <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
     <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
