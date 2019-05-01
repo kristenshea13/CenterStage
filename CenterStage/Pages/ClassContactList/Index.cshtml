@@ -28,6 +28,15 @@
             <th>
                 @Html.DisplayNameFor(model => model.StudentRegistration[0].Student)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentRegistration[0].Student.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentRegistration[0].Student.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentRegistration[0].Student.Birthdate)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -46,6 +55,9 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Student.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Student.Birthdate)
                 </td>
                 <td>
                     <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
