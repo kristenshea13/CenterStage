@@ -16,62 +16,38 @@ namespace CenterStage.Pages.ClassContactList
         public IndexModel(CenterStage.Data.ApplicationDbContext context)
         {
             _context = context;
+
+            
         }
 
         public IList<StudentRegistration> StudentRegistration { get; set; }
 
         [BindProperty(SupportsGet = true)]
-        public string SearchString { get; set; }
+        public int? ClassID { get; set; }
 
-        public SelectList Class { get; set; }
+        public SelectList ClassTitle { get; set; }    
 
-        [BindProperty(SupportsGet = true)]
-        public string ClassTitle { get; set; }
+        
 
-        //public IList<Movie> Movie { get; set; }
-        //[BindProperty(SupportsGet = true)]
-        //public string SearchString { get; set; }
-        //// Requires using Microsoft.AspNetCore.Mvc.Rendering;
-        //public SelectList Genres { get; set; }
-        //[BindProperty(SupportsGet = true)]
-        //public string MovieGenre { get; set; }
-
-
-
-
-
-
+     
 
 
 
         public async Task OnGetAsync()
         {
 
-            //var classes = from c in _context.Class select c;
+            var classes = from c in _context.Class
+                          select c;
 
-            //if (!string.IsNullOrEmpty(SearchString))
-            //{
-            //    classes = classes.Where(s = s.Class.Contains(SearchString));
-            //}
+            ClassTitle = new SelectList(classes.ToList(), "ID", "Title");
 
-            //Class = await classes.ToListAsync().ConfigureAwait(false);
-
+            
 
             StudentRegistration = await _context.StudentRegistration
                 .Include(s => s.Class)
-                .Include(s => s.Student).ToListAsync();
-
-
-
-            //    var movies = from m in _context.Movie
-            //                 select m;
-            //    if (!string.IsNullOrEmpty(SearchString))
-            //    {
-            //        movies = movies.Where(s => s.Title.Contains(SearchString));
-            //    }
-
-            //    Movie = await movies.ToListAsync();
-
+                .Include(s => s.Student).Where(s => ClassID.HasValue && 
+                (ClassID == 0 || s.ClassID == ClassID.Value))
+                .OrderBy(s => s.Class.Title).ToListAsync();
 
 
 

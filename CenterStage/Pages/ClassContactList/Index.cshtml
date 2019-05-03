@@ -8,17 +8,18 @@
 <h1>Class Registration List</h1>
 
 
-@*<form>
+<form>
     <p>
-        <select asp-for="StudentRegistration" asp-items="Model.StudentRegistration.Class">
-            <option value="">All</option>
+        <select asp-for="ClassID" asp-items="Model.ClassTitle">
+            <option value="0">All</option>
         </select>
         <input type="submit" value="Filter" />
     </p>
-</form>*@
+</form>
 
 
-
+@if (Model.ClassID.HasValue)
+{
 <table class="table">
     <thead>
         <tr>
@@ -66,3 +67,4 @@
         }
     </tbody>
 </table>
+}
