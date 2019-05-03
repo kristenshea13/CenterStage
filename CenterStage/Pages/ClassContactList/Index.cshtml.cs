@@ -16,8 +16,6 @@ namespace CenterStage.Pages.ClassContactList
         public IndexModel(CenterStage.Data.ApplicationDbContext context)
         {
             _context = context;
-
-            
         }
 
         public IList<StudentRegistration> StudentRegistration { get; set; }
@@ -25,33 +23,20 @@ namespace CenterStage.Pages.ClassContactList
         [BindProperty(SupportsGet = true)]
         public int? ClassID { get; set; }
 
-        public SelectList ClassTitle { get; set; }    
-
-        
-
-     
-
-
+        public SelectList ClassTitle { get; set; }
 
         public async Task OnGetAsync()
         {
-
             var classes = from c in _context.Class
                           select c;
 
             ClassTitle = new SelectList(classes.ToList(), "ID", "Title");
 
-            
-
             StudentRegistration = await _context.StudentRegistration
                 .Include(s => s.Class)
-                .Include(s => s.Student).Where(s => ClassID.HasValue && 
+                .Include(s => s.Student).Where(s => ClassID.HasValue &&
                 (ClassID == 0 || s.ClassID == ClassID.Value))
                 .OrderBy(s => s.Class.Title).ToListAsync();
-
-
-
-
         }
     }
 }
