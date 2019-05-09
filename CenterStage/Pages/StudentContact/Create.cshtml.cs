@@ -38,7 +38,7 @@ namespace CenterStage.Pages.StudentContact
 
             _context.StudentInfo.Add(StudentInfo);
 
-            
+
 
             await _context.SaveChangesAsync();
 

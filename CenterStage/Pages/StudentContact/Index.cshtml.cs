@@ -28,11 +28,16 @@ namespace CenterStage.Pages.StudentContact
         public async Task OnGetAsync()
         {
             var studentinfo = from s in _context.StudentInfo
+                              //where s.UserName added
+                              where s.UserName == User.Identity.Name
                               select s;
+
             if (!string.IsNullOrEmpty(SearchString))
             {
                 studentinfo = studentinfo.Where(x => x.StudentName.Contains(SearchString));
             }
+
+
 
             StudentInfo = await studentinfo.ToListAsync();
 
