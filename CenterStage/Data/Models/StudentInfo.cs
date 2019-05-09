@@ -29,6 +29,9 @@ namespace CenterStage.Data.Models
         [Required, DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
+        [Required]
+        public string UserName { get; set; }
+
         public virtual IList<StudentRegistration> StudentRegistrations { get; set; }
 
     }

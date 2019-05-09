@@ -34,7 +34,12 @@ namespace CenterStage.Pages.StudentContact
                 return Page();
             }
 
+            StudentInfo.UserName = User.Identity.Name;
+
             _context.StudentInfo.Add(StudentInfo);
+
+            
+
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
