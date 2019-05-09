@@ -14,6 +14,7 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="StudentInfo.ID" />
+            <input type="hidden" asp-for="StudentInfo.UserName" />
             <div class="form-group">
                 <label asp-for="StudentInfo.StudentName" class="control-label"></label>
                 <input asp-for="StudentInfo.StudentName" class="form-control" />
@@ -34,7 +35,7 @@
                 <input asp-for="StudentInfo.Email" class="form-control" />
                 <span asp-validation-for="StudentInfo.Email" class="text-danger"></span>
             </div>
-            <input type="hidden" asp-for="StudentInfo.UserName" />
+
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>

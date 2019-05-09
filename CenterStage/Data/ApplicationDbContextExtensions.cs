@@ -26,11 +26,14 @@ namespace CenterStage.Data
 
                 UserManager.CreateAsync(user, "P@ssword1").GetAwaiter().GetResult();
 
-
+                
 
 
 
             }
+
+            
+
         }
     }
 }
