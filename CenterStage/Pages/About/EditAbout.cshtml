@@ -1,0 +1,34 @@
+﻿@page
+@model CenterStage.Pages.About.EditAboutModel
+@{
+    ViewData["Title"] = "Edit About";
+}
+
+<h1>Edit About</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AboutModel.MissionStmt" class="control-label"></label>
+                <input asp-for="AboutModel.MissionStmt" class="form-control" />
+                <span asp-validation-for="AboutModel.MissionStmt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AboutModel.AboutStudio" class="control-label"></label>
+                <input asp-for="AboutModel.AboutStudio" class="form-control" />
+                <span asp-validation-for="AboutModel.AboutStudio" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="About">Cancel</a>
+</div>

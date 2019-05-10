@@ -428,9 +428,4 @@
     <None Include="wwwroot\lib\jquery\src\wrap.js" />
   </ItemGroup>
 
-
-  <ItemGroup>
-    <Folder Include="Pages\About\" />
-  </ItemGroup>
-
 </Project>
