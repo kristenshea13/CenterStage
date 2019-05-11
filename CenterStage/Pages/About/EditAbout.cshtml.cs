@@ -29,7 +29,7 @@ namespace CenterStage.Pages.About
 
             if (AboutModel == null)
             {
-                AboutModel = new AboutModel { ID = 1 };
+                AboutModel = new Data.Models.AboutModel { ID = 1 };
             }
 
             return Page();

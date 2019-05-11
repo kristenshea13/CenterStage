@@ -8,7 +8,7 @@ namespace CenterStage.Data.Models
 {
     public class AboutModel
     {
-        
+        [Key]
         public int ID { get; set; }
 
         

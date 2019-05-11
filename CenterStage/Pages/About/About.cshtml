@@ -4,8 +4,40 @@
     ViewData["Title"] = "About";
 }
 
-<h1>About Center Stage</h1>
+<h1>Our Story</h1>
 
+@*<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AboutModel[0].MissionStmt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AboutModel[0].AboutStudio)
+            </th>
 
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.AboutModel)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MissionStmt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AboutStudio)
+                </td>
+                
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                    
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>*@
 
+<button class="favorite styled" type="button" asp-page="./EditAbout" >Edit</button>
 

@@ -26,12 +26,26 @@ namespace CenterStage.Data
 
                 UserManager.CreateAsync(user, "P@ssword1").GetAwaiter().GetResult();
 
-                
-
-
+               
 
             }
 
+            if (UserManager.FindByEmailAsync("kristenlshea82@gmail.com").GetAwaiter().GetResult() == null)
+            {
+                var admin = new AppUser
+                {
+                    FirstName = "Karen",
+                    LastName = "Shea",
+                    UserName = "kristenlshea82@gmail.com",
+                    Email = "kristenlshea82@gmail.com",
+                    EmailConfirmed = true,
+                    LockoutEnabled = false
+                
+                };
+
+                UserManager.CreateAsync(admin, "P@ssword2").GetAwaiter().GetResult();
+
+            }
             
 
         }
