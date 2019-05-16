@@ -18,23 +18,22 @@ namespace CenterStage.Pages.About
             _context = context;
         }
 
-        public IActionResult OnGet()
-        {
-            return Page();
-        }
+
 
         [BindProperty]
-        public Data.Models.AboutModel AboutModel { get; set; }
+        public Data.Models.AboutModel About { get; set; }
 
+        
+        
 
 
         public async Task<IActionResult> OnGetAsync()
         {
-            AboutModel = await _context.About.FirstOrDefaultAsync(m => m.ID == 1).ConfigureAwait(false);
+            About = await _context.About.FirstOrDefaultAsync(m => m.ID == 1).ConfigureAwait(false);
 
-            if (AboutModel == null)
+            if (About == null)
             {
-                AboutModel = new Data.Models.AboutModel { ID = 1 };
+                About = new Data.Models.AboutModel { ID = 1 };
             }
 
             return Page();
