@@ -18,6 +18,11 @@ namespace CenterStage.Pages.About
             _context = context;
         }
 
+        public IActionResult OnGet()
+        {
+            return Page();
+        }
+
         [BindProperty]
         public Data.Models.AboutModel AboutModel { get; set; }
 
@@ -25,7 +30,7 @@ namespace CenterStage.Pages.About
 
         public async Task<IActionResult> OnGetAsync()
         {
-            AboutModel = await _context.AboutModel.FirstOrDefaultAsync(m => m.ID == 1);
+            AboutModel = await _context.About.FirstOrDefaultAsync(m => m.ID == 1).ConfigureAwait(false);
 
             if (AboutModel == null)
             {
@@ -34,7 +39,7 @@ namespace CenterStage.Pages.About
 
             return Page();
 
-
+           
 
 
         }

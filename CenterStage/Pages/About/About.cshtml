@@ -4,40 +4,46 @@
     ViewData["Title"] = "About";
 }
 
-<h1>Our Story</h1>
+<body>
+    
 
-@*<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.AboutModel[0].MissionStmt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AboutModel[0].AboutStudio)
-            </th>
+        <h1>Our Story</h1>
 
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.AboutModel)
-        {
+        <p><input type="submit" value="Create" class="btn btn-primary" asp-route="./EditAbout/1" /></p>
+
+
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MissionStmt)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AboutStudio)
-                </td>
-                
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                    
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.About[0].MissionStmt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.About[0].AboutStudio)
+                </th>
 
-<button class="favorite styled" type="button" asp-page="./EditAbout" >Edit</button>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.About)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MissionStmt)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AboutStudio)
+                    </td>
+
+                    <td>
+                        <a asp-page="./About/EditAbout" asp-route-id="@item.ID">Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</body>
+
 

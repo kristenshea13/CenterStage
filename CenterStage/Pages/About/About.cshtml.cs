@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CenterStage.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -17,18 +18,29 @@ namespace CenterStage.Pages.About
             _context = context;
         }
 
-        [BindProperty]
-        public string MissionStmt { get; set; }
+        //public IActionResult OnGet()
+        //{
+        //    return Page();
+        //}
 
-        [BindProperty]
-        public string AboutStudio { get; set; }
+
+        //[BindProperty]
+        //public string MissionStmt { get; set; }
+
+        //[BindProperty]
+        //public string AboutStudio { get; set; }
 
         public int ID { get; set; }
 
-        public void OnGet()
-        {
+        [BindProperty]
+        public List<Data.Models.AboutModel> About { get; set; }
 
-            
+        
+
+        public async Task OnGetAsync()
+        {
+            About = await _context.About.ToListAsync();
+
 
         }
     }
