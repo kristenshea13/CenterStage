@@ -34,11 +34,17 @@ namespace CenterStage.Pages.About
             if (About == null)
             {
                 About = new Data.Models.AboutModel { ID = 1 };
+                return Page();
             }
 
-            return Page();
 
-           
+            await _context.SaveChangesAsync();
+
+            
+
+            return RedirectToPage("./About");
+
+
 
 
         }
