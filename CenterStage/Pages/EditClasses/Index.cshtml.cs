@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using CenterStage.Data;
 using CenterStage.Data.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CenterStage.Pages.EditClasses
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
         private readonly CenterStage.Data.ApplicationDbContext _context;

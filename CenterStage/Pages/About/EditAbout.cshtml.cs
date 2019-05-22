@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CenterStage.Data.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
 namespace CenterStage.Pages.About
 {
+    [Authorize]
     public class EditAboutModel : PageModel
     {
+        
+
         private readonly CenterStage.Data.ApplicationDbContext _context;
 
         public EditAboutModel(CenterStage.Data.ApplicationDbContext context)

@@ -1,4 +1,5 @@
 ﻿using CenterStage.Data.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -9,6 +10,8 @@ using System.Threading.Tasks;
 
 namespace CenterStage.Pages.ClassContactList
 {
+    [Authorize]
+
     public class IndexModel : PageModel
     {
         private readonly CenterStage.Data.ApplicationDbContext _context;

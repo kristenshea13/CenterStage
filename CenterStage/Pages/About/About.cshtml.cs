@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CenterStage.Data.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
 namespace CenterStage.Pages.About
 {
+    [AllowAnonymous]
     public class AboutModel : PageModel
     {
         private readonly CenterStage.Data.ApplicationDbContext _context;

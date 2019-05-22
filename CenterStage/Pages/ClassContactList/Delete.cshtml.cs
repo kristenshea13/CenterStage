@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using CenterStage.Data;
 using CenterStage.Data.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CenterStage.Pages.ClassContactList
 {
+    [Authorize]
     public class DeleteModel : PageModel
     {
         private readonly CenterStage.Data.ApplicationDbContext _context;

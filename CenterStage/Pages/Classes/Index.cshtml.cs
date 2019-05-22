@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CenterStage.Pages.Classes
 {
+    
     //allows page to be seen without logging in or creating a user account
     [AllowAnonymous]
     public class IndexModel : PageModel
