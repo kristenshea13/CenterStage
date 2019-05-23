@@ -16,9 +16,6 @@
     </p>
 
 
-    
-
-
 
     <table class="table">
         <thead>
@@ -26,9 +23,7 @@
                 <th>
                     @Html.DisplayNameFor(model => model.About[0].MissionStmt)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.About[0].AboutStudio)
-                </th>
+
 
                 <th></th>
             </tr>
@@ -40,17 +35,43 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.MissionStmt)
                     </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.AboutStudio)
-                    </td>
+
 
                     <td>
                         <a asp-page="./About/EditAbout" asp-route-id="@item.ID">Edit</a>
                     </td>
                 </tr>
             }
+
         </tbody>
     </table>
+
+    <br />
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.About[0].AboutStudio)</th>
+                <th></th>
+
+            </tr>
+            </thead>
+        <tbody>
+            @foreach (var item in Model.About)
+            {
+            <tr>
+
+                <td>@Html.DisplayFor(modelItem => item.AboutStudio)</td>
+                <td>
+                    <a asp-page="./About/EditAbout" asp-route-id="@item.ID">Edit</a>
+                </td>
+
+            </tr>
+            }
+        </tbody>
+    </table>
+
 
 </body>
 
