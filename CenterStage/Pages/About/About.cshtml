@@ -10,10 +10,10 @@
     <div class="box-shadow"><h1>Our Story</h1></div>
 
 
-    <p>
-        <input type="submit" value="Create"
-               asp-route="./EditAbout/1" />
-    </p>
+    @*<p>
+            <input type="submit" value="Create"
+                   asp-route="./EditAbout/1" />
+        </p>*@
 
 
 
@@ -21,7 +21,7 @@
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.About[0].MissionStmt)
+                    @Html.DisplayNameFor(model => model.About[1].MissionStmt)
                 </th>
 
 
@@ -47,27 +47,29 @@
     </table>
 
     <br />
-
+    <br />
+    <br />
+    <br />
 
     <table class="table">
         <thead>
             <tr>
-                <th>@Html.DisplayNameFor(model => model.About[0].AboutStudio)</th>
+                <th>@Html.DisplayNameFor(model => model.About[1].AboutStudio)</th>
                 <th></th>
 
             </tr>
-            </thead>
+        </thead>
         <tbody>
             @foreach (var item in Model.About)
             {
-            <tr>
+                <tr>
 
-                <td>@Html.DisplayFor(modelItem => item.AboutStudio)</td>
-                <td>
-                    <a asp-page="./About/EditAbout" asp-route-id="@item.ID">Edit</a>
-                </td>
+                    <td>@Html.DisplayFor(modelItem => item.AboutStudio)</td>
+                    <td>
+                        <a asp-page="./About/EditAbout" asp-route-id="@item.ID">Edit</a>
+                    </td>
 
-            </tr>
+                </tr>
             }
         </tbody>
     </table>
