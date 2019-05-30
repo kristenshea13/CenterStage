@@ -33,11 +33,14 @@ namespace CenterStage.Pages.About
 
         public async Task<IActionResult> OnGetAsync()
         {
+            
+
             About = await _context.About.FirstOrDefaultAsync(m => m.ID == 1).ConfigureAwait(false);
 
             if (About == null)
             {
                 About = new Data.Models.AboutModel { ID = 1 };
+
                 return Page();
             }
 
