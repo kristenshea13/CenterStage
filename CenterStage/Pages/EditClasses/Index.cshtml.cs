@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace CenterStage.Pages.EditClasses
 {
+    //[Authorize(Roles = "Administrator")]
     [Authorize]
     public class IndexModel : PageModel
     {
