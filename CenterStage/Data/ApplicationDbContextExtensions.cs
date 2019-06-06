@@ -11,6 +11,7 @@ namespace CenterStage.Data
     {
         public static UserManager<AppUser> UserManager { get; set; }
 
+
         public static void EnsureSeeded(this ApplicationDbContext context)
         {
             if (UserManager.FindByEmailAsync("kristenshea@rocketmail.com").GetAwaiter().GetResult() == null)
