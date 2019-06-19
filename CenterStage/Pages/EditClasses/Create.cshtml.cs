@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace CenterStage.Pages.EditClasses
 {
     
-    [Authorize]
+    [Authorize(Roles = "admin")]
 
     public class CreateModel : PageModel
     {

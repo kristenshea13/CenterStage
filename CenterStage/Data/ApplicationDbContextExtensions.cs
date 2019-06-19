@@ -28,13 +28,13 @@ namespace CenterStage.Data
 
                 UserManager.CreateAsync(user, "P@ssword1").GetAwaiter().GetResult();
 
-               
+
 
             }
 
             if (UserManager.FindByEmailAsync("kristenlshea82@gmail.com").GetAwaiter().GetResult() == null)
             {
-                var admin = new AppUser
+                var user2 = new AppUser
                 {
                     FirstName = "Karen",
                     LastName = "Shea",
@@ -42,14 +42,30 @@ namespace CenterStage.Data
                     Email = "kristenlshea82@gmail.com",
                     EmailConfirmed = true,
                     LockoutEnabled = false
-                
+
                 };
 
-                UserManager.CreateAsync(admin, "P@ssword2").GetAwaiter().GetResult();
+                UserManager.CreateAsync(user2, "P@ssword2").GetAwaiter().GetResult();
 
             }
-            
 
+            if (UserManager.FindByEmailAsync("kstar61@live.com").GetAwaiter().GetResult() == null)
+            {
+                var user3 = new AppUser
+                {
+                    FirstName = "Kristen",
+                    LastName = "Shea",
+                    UserName = "kstar61@live.com",
+                    Email = "kstar61@live.com",
+                    EmailConfirmed = true,
+                    LockoutEnabled = false
+
+                };
+                UserManager.CreateAsync(user3, "P@ssword3").GetAwaiter().GetResult();
+
+
+
+            }
         }
     }
 }
