@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CenterStage.Pages.ClassContactList
 {
-    [Authorize]
+    [Authorize(Roles = "admin, teacher")]
 
     public class IndexModel : PageModel
     {

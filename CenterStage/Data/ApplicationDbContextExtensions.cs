@@ -49,7 +49,26 @@ namespace CenterStage.Data
 
             }
 
-            
+
+            if (UserManager.FindByEmailAsync("kstar61@live.com").GetAwaiter().GetResult() == null)
+            {
+                var user3 = new AppUser
+                {
+                    FirstName = "Kristen",
+                    LastName = "Shea",
+                    UserName = "kstar61@live.com",
+                    Email = "kstar61@live.com",
+                    EmailConfirmed = true,
+                    LockoutEnabled = false
+
+                };
+
+                UserManager.CreateAsync(user3, "P@ssword3").GetAwaiter().GetResult();
+
+            }
+
+
+
         }
     }
 }
