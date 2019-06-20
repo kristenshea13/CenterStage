@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace CenterStage.Pages.EditClasses
 {
-    [Authorize]
+    [Authorize(Roles =  "admin")]
     public class DeleteModel : PageModel
     {
         private readonly CenterStage.Data.ApplicationDbContext _context;

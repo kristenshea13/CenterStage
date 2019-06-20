@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace CenterStage.Pages.EditClasses
 {
-    [Authorize]
+    [Authorize(Roles = "admin")]
     public class EditModel : PageModel
     {
         private readonly CenterStage.Data.ApplicationDbContext _context;
