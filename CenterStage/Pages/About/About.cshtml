@@ -8,7 +8,7 @@
 
     <div class="box-shadow"><h1>Our Story</h1></div>
 
-    <input type="submit" value="Create" asp-page="./EditAbout/1" />
+    @*<input type="submit" value="Create" asp-page="./EditAbout/1" />*@
 
     
 
@@ -31,27 +31,27 @@
                     <p>
                         We are a group of teachers who believe that no child
                         should be left out of the arts due to cost. We offer
-                        high quality dance education in ballet, tap, poms, jazz,
-                        lyrical, and pointe, at a rate that won't stress your wallet.
+                        high quality dance education in Ballet, Tap, Poms, Jazz,
+                        Lyrical, and Pointe, at a rate that won't stress your wallet.
                     </p>
                 </td>
             </tr>
-            @foreach (var item in Model.About)
+            @*@foreach (var item in Model.About)
             {
                 <tr>
-                    <td>
+                    <td>*@
                         @*@Html.DisplayFor(modelItem => item.MissionStmt)*@
 
                         
 
-                    </td>
+                    @*</td>*@
 
 
-                    <td>
+                    @*<td>
                         <a asp-page="./About/EditAbout" asp-route-id="@item.ID">Edit</a>
-                    </td>
-                </tr>
-            }
+                    </td>*@
+                @*</tr>
+            }*@
 
         </tbody>
     </table>
@@ -68,24 +68,38 @@
 
             </tr>
         </thead>
-        <tbody>
+        @*<tbody>
             @foreach (var item in Model.About)
             {
                 <tr>
 
                     <td>@Html.DisplayFor(modelItem => item.AboutStudio)</td>
+
                     <td>
                         <a asp-page="./About/EditAbout" asp-route-id="@item.ID">Edit</a>
                     </td>
 
                 </tr>
             }
+        </tbody>*@
+        <tbody>
+            <tr>
+                <td>
+                    <p>
+                        Center Stage is a dance community where every child is welcome, regardless of
+                        ability or economic status. We offer classes for beginners of all ages up to young
+                        adults training to be professional working dancers.
+
+
+                        
+                    </p>
+                </td>
+            </tr>
+
         </tbody>
 
 
-
     </table>
-
 
 </body>
 

@@ -10,7 +10,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CenterStage.Pages.About
 {
-    [Authorize]
+    [Authorize(Roles = "admin")]
+
     public class EditAboutModel : PageModel
     {
         
