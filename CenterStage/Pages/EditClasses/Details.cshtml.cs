@@ -11,7 +11,8 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace CenterStage.Pages.EditClasses
 {
-    [Authorize]
+    [Authorize(Roles = "admin, teacher")]
+
     public class DetailsModel : PageModel
     {
         private readonly CenterStage.Data.ApplicationDbContext _context;

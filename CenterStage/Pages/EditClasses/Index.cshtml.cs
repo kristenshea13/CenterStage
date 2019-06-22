@@ -12,8 +12,8 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace CenterStage.Pages.EditClasses
 {
-    //[Authorize(Roles = "Administrator")]
     [Authorize]
+    
     public class IndexModel : PageModel
     {
         private readonly CenterStage.Data.ApplicationDbContext _context;
