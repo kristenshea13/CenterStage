@@ -10,17 +10,14 @@
 
     @*<input type="submit" value="Create" asp-page="./EditAbout/1" />*@
 
-    
-
-
-
     <table class="table">
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.About[1].MissionStmt)
+                    <p style="font-family:Courier New, Courier, monospace; font-size:large">
+                        @Html.DisplayNameFor(model => model.About[1].MissionStmt)
+                    </p>
                 </th>
-
 
                 <th></th>
             </tr>
@@ -37,51 +34,45 @@
                 </td>
             </tr>
             @*@foreach (var item in Model.About)
-            {
-                <tr>
-                    <td>*@
-                        @*@Html.DisplayFor(modelItem => item.MissionStmt)*@
+                {
+                    <tr>
+                        <td>*@
+            @*@Html.DisplayFor(modelItem => item.MissionStmt)*@
 
-                        
+            @*</td>*@
 
-                    @*</td>*@
-
-
-                    @*<td>
-                        <a asp-page="./About/EditAbout" asp-route-id="@item.ID">Edit</a>
-                    </td>*@
-                @*</tr>
-            }*@
-
+            @*<td>
+                    <a asp-page="./About/EditAbout" asp-route-id="@item.ID">Edit</a>
+                </td>*@
+            @*</tr>
+                }*@
         </tbody>
     </table>
-
-    
-    
-    
 
     <table class="table">
         <thead>
             <tr>
-                <th>@Html.DisplayNameFor(model => model.About[1].AboutStudio)</th>
+                <th>
+                    <p style="font-family:Courier New, Courier, monospace; font-size:large">
+                        @Html.DisplayNameFor(model => model.About[1].AboutStudio)
+                    </p>
+                </th>
                 <th></th>
-
             </tr>
         </thead>
         @*<tbody>
-            @foreach (var item in Model.About)
-            {
-                <tr>
+                @foreach (var item in Model.About)
+                {
+                    <tr>
 
-                    <td>@Html.DisplayFor(modelItem => item.AboutStudio)</td>
+                        <td>@Html.DisplayFor(modelItem => item.AboutStudio)</td>
 
-                    <td>
-                        <a asp-page="./About/EditAbout" asp-route-id="@item.ID">Edit</a>
-                    </td>
-
-                </tr>
-            }
-        </tbody>*@
+                        <td>
+                            <a asp-page="./About/EditAbout" asp-route-id="@item.ID">Edit</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>*@
         <tbody>
             <tr>
                 <td>
@@ -89,18 +80,9 @@
                         Center Stage is a dance community where every child is welcome, regardless of
                         ability or economic status. We offer classes for beginners of all ages up to young
                         adults training to be professional working dancers.
-
-
-                        
                     </p>
                 </td>
             </tr>
-
         </tbody>
-
-
     </table>
-
 </body>
-
-
