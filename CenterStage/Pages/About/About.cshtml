@@ -8,7 +8,7 @@
 
     <div class="box-shadow"><h1>Our Story</h1></div>
 
-    @*<input type="submit" value="Create" asp-page="./EditAbout/1" />*@
+    
 
     <table class="table">
         <thead>
@@ -33,19 +33,7 @@
                     </p>
                 </td>
             </tr>
-            @*@foreach (var item in Model.About)
-                {
-                    <tr>
-                        <td>*@
-            @*@Html.DisplayFor(modelItem => item.MissionStmt)*@
-
-            @*</td>*@
-
-            @*<td>
-                    <a asp-page="./About/EditAbout" asp-route-id="@item.ID">Edit</a>
-                </td>*@
-            @*</tr>
-                }*@
+            
         </tbody>
     </table>
 
@@ -60,19 +48,7 @@
                 <th></th>
             </tr>
         </thead>
-        @*<tbody>
-                @foreach (var item in Model.About)
-                {
-                    <tr>
-
-                        <td>@Html.DisplayFor(modelItem => item.AboutStudio)</td>
-
-                        <td>
-                            <a asp-page="./About/EditAbout" asp-route-id="@item.ID">Edit</a>
-                        </td>
-                    </tr>
-                }
-            </tbody>*@
+        
         <tbody>
             <tr>
                 <td>
